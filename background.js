@@ -15,14 +15,16 @@ const TYPE_MAP = {
   // TODO: Hooks for activitystream rendering?
   'application/activity+json': 'json',
   'application/ld+json': 'json',
-  'application/ssb+json': 'ssb'
+  'application/ssb+json': 'ssb',
+  'text/x-org': 'orgmode'
 }
 
 const SCRIPT_MAP = {
   markdown: scriptURL('markdown'),
   gemini: scriptURL('gemini'),
   json: scriptURL('json'),
-  ssb: scriptURL('ssb')
+  ssb: scriptURL('ssb'),
+  orgmode: scriptURL('orgmode')
 }
 
 const code = `

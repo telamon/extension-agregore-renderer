@@ -11,7 +11,8 @@
     "build-gemini": "browserify ./gemini.js > bundle-gemini.js",
     "build-ssb": "browserify ./ssb.js > bundle-ssb.js",
     "build-reader": "browserify ./reader.js > bundle-reader.js",
-    "build": "npm run build-markdown && npm run build-json && npm run build-gemini && npm run build-ssb && npm run build-reader"
+    "build-org": "esbuild --bundle orgmode.js --outfile=bundle-orgmode.js",
+    "build": "npm run build-markdown && npm run build-json && npm run build-gemini && npm run build-ssb && npm run build-reader && npm run build-org"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "homepage": "https://github.com/RangerMauve/extension-agregore-renderer#readme",
   "devDependencies": {
     "browserify": "^17.0.0",
+    "esbuild": "^0.23.0",
     "standard": "^17.0.0"
   },
   "dependencies": {
@@ -33,10 +35,14 @@
     "gemini-to-html": "^2.2.0",
     "html-to-text": "^8.2.0",
     "marked": "^4.0.16",
+    "rehype-stringify": "^10.0.0",
     "ssb-fetch": "^1.5.2",
     "ssb-markdown": "^6.0.7",
     "ssb-ref": "^2.16.0",
-    "ssb-uri2": "^1.8.1"
+    "ssb-uri2": "^1.8.1",
+    "unified": "^11.0.5",
+    "uniorg-parse": "^3.0.1",
+    "uniorg-rehype": "^1.2.0"
   },
   "standard": {
     "ignore": [

@@ -28,6 +28,7 @@
 		"bundle-markdown.js",
 		"bundle-json.js",
 		"bundle-ssb.js",
-		"bundle-reader.js"
+		"bundle-reader.js",
+                "bundle-orgmode.js"
 	]
 }
